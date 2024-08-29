@@ -1,18 +1,6 @@
 codecov:
   bot: "codecov-io"
 
-coverage:
-  status:
-    project:
-      onboard:
-        target: 75
-        flags:
-          - onboard
-      repo:
-        target: 1
-        flags:
-          - repo
-
 comment:
   layout: "diff, flags, files"
   behavior: default
@@ -21,12 +9,18 @@ comment:
 github_checks:
   annotations: true
 
-flags:
-  onboard:
-    paths:
-      - example/implementation.py
-      - example/implementation_test.py
-  repo:
-    paths:
-      - non_example/example.py
-      - non_example/example_test.py
+coverage:
+  status:
+    project:
+      onboard:
+        paths:
+          - "example/implementation.py"
+          - "example/implementation_test.py"
+        target: 97%
+        threshold: 0.2%
+      repo:
+        paths:
+          - "non_example/example.py"
+          - "non_example/example_test.py"
+        target: 10%
+        threshold: 0.2%
