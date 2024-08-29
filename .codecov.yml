@@ -1,3 +1,5 @@
+bot: "codecov-io"
+
 coverage:
   status:
     project:
@@ -10,7 +12,13 @@ coverage:
         flags:
           - repo
 
-comment: true
+comment:
+  layout: "diff, flags, files"
+  behavior: default
+  require_changes: false 
+
+github_checks:
+  annotations: true
 
 flags:
   onboard:

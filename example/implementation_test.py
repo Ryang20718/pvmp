@@ -1,6 +1,6 @@
 #
 
-from waabi.example import implementation
+from example import implementation
 
 
 def test_the_answer():
