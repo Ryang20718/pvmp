@@ -1,4 +1,3 @@
-# schema reference: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 name: ci
 on:
@@ -6,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches:
-      - main
+      - master
 
 defaults:
   run:
