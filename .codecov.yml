@@ -10,10 +10,10 @@ coverage:
       default:
         target: 90% #overall project/ repo coverage
     patch:
-      onboard:
+      onboard_av_binary:
         target: 60%
         flags:
-          - onboard
+          - onboard_av_binary
       torchscript_input_files:
         target: 100%
         flags:
@@ -33,7 +33,7 @@ comment:
 # uploader, and update when new Flags added
 
 flags:
-  onboard:
+  onboard_av_binary:
     paths:
       - example/implementation.py
       - example/implementation_test.py
