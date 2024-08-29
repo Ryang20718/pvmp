@@ -4,11 +4,11 @@ coverage:
   status:
     project:
       onboard:
-        target: 10
+        target: 75
         flags:
           - onboard
       repo:
-        target: 10
+        target: 1
         flags:
           - repo
 
@@ -23,9 +23,11 @@ github_checks:
 flags:
   onboard:
     paths:
-      - example/implementation.py
-      - example/implementation_test.py
+      - pvmp/example/implementation.py
+      - pvmp/example/implementation_test.py
   repo:
     paths:
-      - non_example/example.py
-      - non_example/example_test.py
+      - pvmp/non_example/example.py
+      - pvmp/non_example/example_test.py
+      - pvmp/example/implementation.py
+      - pvmp/example/implementation_test.py
