@@ -1,3 +1,6 @@
+codecov:
+  bot: "codecov-io"
+
 coverage:
   status:
     project:
@@ -21,11 +24,9 @@ github_checks:
 flags:
   onboard:
     paths:
-      - pvmp/example/implementation.py
-      - pvmp/example/implementation_test.py
+      - example/implementation.py
+      - example/implementation_test.py
   repo:
     paths:
-      - pvmp/non_example/example.py
-      - pvmp/non_example/example_test.py
-      - pvmp/example/implementation.py
-      - pvmp/example/implementation_test.py
+      - non_example/example.py
+      - non_example/example_test.py
