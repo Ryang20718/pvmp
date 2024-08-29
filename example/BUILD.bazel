@@ -1,0 +1,5 @@
+load("//rules:python.bzl", "python_module_glob")
+
+python_module_glob(
+    name = "example",
+)
