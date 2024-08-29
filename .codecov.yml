@@ -1,5 +1,3 @@
-bot: "codecov-io"
-
 coverage:
   status:
     project:

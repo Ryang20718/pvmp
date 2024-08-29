@@ -1,12 +1,10 @@
-# schema reference: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
-
 name: ci
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
   push:
     branches:
-      - master
+      - main
 
 defaults:
   run:
