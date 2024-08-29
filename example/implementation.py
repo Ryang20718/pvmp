@@ -26,4 +26,6 @@ if __name__ == "__main__":
 
 def hello():
     print("HERE")
+    print("HERE")
+    print("HERE")
 ##
