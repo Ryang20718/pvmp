@@ -20,9 +20,18 @@ jobs:
 
       - uses: codecov/codecov-action@v4
         with:
-          files: on_coverage.dat, repo_coverage.dat
-          flags: onboard, repo
-          name: coverage
+          files: repo_coverage.dat
+          flags: repo
+          name: coverage_repo
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - uses: codecov/codecov-action@v4
+        with:
+          files: on_coverage.dat
+          flags: onboard
+          name: coverage_onboard
           verbose: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
