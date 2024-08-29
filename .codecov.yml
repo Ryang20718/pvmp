@@ -1,14 +1,5 @@
-coverage:
-  status:
-    project:
-      onboard:
-        target: 75
-        flags:
-          - onboard
-      repo:
-        target: 1
-        flags:
-          - repo
+codecov:
+  bot: "codecov-io"
 
 comment:
   layout: "diff, flags, files"
@@ -18,14 +9,18 @@ comment:
 github_checks:
   annotations: true
 
-flags:
-  onboard:
-    paths:
-      - pvmp/example/implementation.py
-      - pvmp/example/implementation_test.py
-  repo:
-    paths:
-      - pvmp/non_example/example.py
-      - pvmp/non_example/example_test.py
-      - pvmp/example/implementation.py
-      - pvmp/example/implementation_test.py
+coverage:
+  status:
+    project:
+      onboard:
+        paths:
+          - "example/implementation.py"
+          - "example/implementation_test.py"
+        target: 97%
+        threshold: 0.2%
+      repo:
+        paths:
+          - "non_example/example.py"
+          - "non_example/example_test.py"
+        target: 10%
+        threshold: 0.2%
