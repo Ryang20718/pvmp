@@ -10,6 +10,7 @@ coverage:
         flags:
           - repo
 
+comment: true
 
 flags:
   onboard:
@@ -18,4 +19,5 @@ flags:
       - example/implementation_test.py
   repo:
     paths:
-      - non_example/example/py
+      - non_example/example.py
+      - non_example/example_test.py
