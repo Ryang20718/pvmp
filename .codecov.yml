@@ -9,14 +9,15 @@ coverage:
     project:
       default:
         target: 90% #overall project/ repo coverage
+    patch:
       onboard:
         target: 60%
-       flags:
+        flags:
           - onboard
-      repo:
+      torchscript_input_files:
         target: 100%
         flags:
-          - repo
+          - torchscript_input_files
 
 # adding Flags to your `layout` configuration to show up in the PR comment
 comment:
@@ -33,29 +34,12 @@ comment:
 
 flags:
   onboard:
-    paths: #note, accepts globs, not regexes
+    paths:
       - example/implementation.py
       - example/implementation_test.py
     carryforward: false
-  repo:
-    paths: #note, accepts globs, not regexes
+  torchscript_input_files:
+    paths:
       - non_example/example.py
       - non_example/example_test.py
     carryforward: false
-
-
-# coverage:
-#   status:
-#     project:
-#       onboard:
-#         paths:
-#           - "example/implementation.py"
-#           - "example/implementation_test.py"
-#         target: 97%
-#         threshold: 0.2%
-#       repo:
-#         paths:
-#           - "non_example/example.py"
-#           - "non_example/example_test.py"
-#         target: 10%
-#         threshold: 0.2%
