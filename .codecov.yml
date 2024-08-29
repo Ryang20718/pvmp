@@ -1,0 +1,21 @@
+coverage:
+  status:
+    project:
+      onboard:
+        target: 10
+        flags:
+          - onboard
+      repo:
+        target: 10
+        flags:
+          - repo
+
+
+flags:
+  onboard:
+    paths:
+      - example/implementation.py
+      - example/implementation_test.py
+  repo:
+    paths:
+      - non_example/example/py

@@ -1,7 +1,0 @@
-root = true
-
-[*]
-charset = utf-8
-
-[*.ts]
-end_of_line = lf
