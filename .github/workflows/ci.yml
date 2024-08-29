@@ -4,7 +4,7 @@ name: ci
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
-
+  branches: [ main ]
 
 defaults:
   run:
@@ -20,18 +20,18 @@ jobs:
 
       - uses: codecov/codecov-action@v4
         with:
-          files: on_coverage.dat
-          flags: onboard
-          name: onboard
+          files: on_coverage.dat, repo_coverage.dat
+          flags: onboard, repo
+          name: coverage
           verbose: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-      - uses: codecov/codecov-action@v4
-        with:
-          files: repo_coverage.dat
-          flags: repo
-          name: repo
-          verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      # - uses: codecov/codecov-action@v4
+      #   with:
+      #     files: repo_coverage.dat
+      #     flags: repo
+      #     name: repo
+      #     verbose: true
+      #   env:
+      #     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
