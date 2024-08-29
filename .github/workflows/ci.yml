@@ -20,12 +20,21 @@ jobs:
 
       - uses: codecov/codecov-action@v4
         with:
-          files: on_coverage.dat, repo_coverage.dat
-          flags: onboard, repo
-          name: coverage
+          file: repo_coverage.dat
+          flags: torchscript_input_files
+          name: coverage_torchscript
           verbose: true
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }}
+          codecov_yml_path: .codecov.yml
+
+      - uses: codecov/codecov-action@v4
+        with:
+          file: on_coverage.dat
+          flags: onboard
+          name: coverage_onboard
+          verbose: true
+          token: ${{ secrets.CODECOV_TOKEN }}
+          codecov_yml_path: .codecov.yml
 
       # - uses: codecov/codecov-action@v4
       #   with:

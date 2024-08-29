@@ -3,6 +3,16 @@
 
 def the_answer():
     """Example function to be tested."""
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
     return 42
 
 

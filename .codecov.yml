@@ -1,26 +1,45 @@
 codecov:
   bot: "codecov-io"
 
-comment:
-  layout: "diff, flags, files"
-  behavior: default
-  require_changes: false 
-
 github_checks:
   annotations: true
 
 coverage:
   status:
     project:
+      default:
+        target: 90% #overall project/ repo coverage
+    patch:
       onboard:
-        paths:
-          - "example/implementation.py"
-          - "example/implementation_test.py"
-        target: 97%
-        threshold: 0.2%
-      repo:
-        paths:
-          - "non_example/example.py"
-          - "non_example/example_test.py"
-        target: 10%
-        threshold: 0.2%
+        target: 60%
+        flags:
+          - onboard
+      torchscript_input_files:
+        target: 100%
+        flags:
+          - torchscript_input_files
+
+# adding Flags to your `layout` configuration to show up in the PR comment
+comment:
+  layout:  "diff, flags, files"
+  behavior: default
+  require_changes: false  
+  require_base: yes
+  require_head: yes       
+  branches: null
+
+# New root YAML section = `flags:`
+# This is where you would define every flag from your
+# uploader, and update when new Flags added
+
+flags:
+  onboard:
+    paths:
+      - example/implementation.py
+      - example/implementation_test.py
+    carryforward: false
+  torchscript_input_files:
+    paths:
+      - non_example/example.py
+      - non_example/example_test.py
+    carryforward: false
