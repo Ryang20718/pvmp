@@ -3,6 +3,24 @@
 
 def the_answer():
     """Example function to be tested."""
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
+    print("HERE")
     return 42
 
 
@@ -16,4 +34,5 @@ if __name__ == "__main__":
 
 def hello():
     print("HERE")
-#
+    print("HERE")
+    print("HERE")
